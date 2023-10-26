@@ -1,0 +1,32 @@
+<table class="table" style="text-align: center;">
+  <thead>
+      <tr>
+          <th scope="col">Nombre y Apellidos</th>
+          <th scope="col">Email</th>
+          <th scope="col">Tipo de Cliente</th>
+          <th scope="col">Fecha de llegada</th>
+          <th scope="col">Fecha de salida</th>
+          <th scope="col">Acciones</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let reserva of reservas">
+          <th scope="row">{{ reserva.nombre }} {{ reserva.apellidos }}</th>
+          <td>{{ reserva.email }}</td>
+          <td>{{ reserva.tipoCliente }}</td>
+          <td>{{ reserva.fechaLlegada }}</td>
+          <td>{{ reserva.fechaSalida}}</td>
+         
+          <td>
+              <button type="button" class="btn btn-danger" style="margin-right: 8px;"
+              (click)="eliminarReserva(reserva)">Eliminar</button>
+              <button type="button" class="btn btn-primary" (click)="editarReserva(reserva)">Editar</button>
+          </td>
+      </tr>
+  </tbody>
+
+</table>
+
+
+
+  
